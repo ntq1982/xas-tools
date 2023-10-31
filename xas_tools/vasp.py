@@ -222,7 +222,7 @@ class CHPCalculation(object):
             site_list = struc_super.sites.copy()
             site_list = [site_list[active[0]]] + site_list
             del site_list[active[0]+1]
-            xas_struc = mg.Structure.from_sites(site_list)
+            xas_struc = mg.core.Structure.from_sites(site_list)
 
             vaspset = DictSet(xas_struc, config,
                               sort_structure=False,
