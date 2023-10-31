@@ -284,7 +284,7 @@ def parse_vasp_chp_output(base_path, output_path='XAS_output'):
     etot_no_ch = oszicar_no_ch.ionic_steps[-1]['E0']
 
     # read also the structures to determine the size of the supercell
-    structure_no_ch = mg.Structure.from_file(
+    structure_no_ch = mg.core.Structure.from_file(
         os.path.join(no_ch_path, 'CONTCAR'))
     structure_ch = mg.Structure.from_file(os.path.join(ch_paths[0], 'CONTCAR'))
     N_no_ch = len(structure_no_ch.sites)
