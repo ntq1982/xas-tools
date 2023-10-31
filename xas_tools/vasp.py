@@ -55,7 +55,7 @@ class CHPCalculation(object):
 
         """
         self.structure = structure
-        self.xas_element = mg.Element(element)
+        self.xas_element = mg.core.periodic_table.Element(element)
         self.ch_n = n
         self.ch_l = ell
         self.ch_z = z
