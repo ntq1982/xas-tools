@@ -286,7 +286,7 @@ def parse_vasp_chp_output(base_path, output_path='XAS_output'):
     # read also the structures to determine the size of the supercell
     structure_no_ch = mg.core.Structure.from_file(
         os.path.join(no_ch_path, 'CONTCAR'))
-    structure_ch = mg.Structure.from_file(os.path.join(ch_paths[0], 'CONTCAR'))
+    structure_ch = mg.core.Structure.from_file(os.path.join(ch_paths[0], 'CONTCAR'))
     N_no_ch = len(structure_no_ch.sites)
     N_ch = len(structure_ch.sites)
     supercell = N_ch/N_no_ch
